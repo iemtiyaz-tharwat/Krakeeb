@@ -1,0 +1,5 @@
+package com.example.krakeeb
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
