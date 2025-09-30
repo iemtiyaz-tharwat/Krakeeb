@@ -1,25 +1,6 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
-
-abstract class PhoneOtpState {}
-
-class PhoneOtpInitial extends PhoneOtpState {}
-
-class PhoneOtpLoading extends PhoneOtpState {}
-
-class PhoneOtpCodeSent extends PhoneOtpState {
-  final String verificationId;
-  PhoneOtpCodeSent(this.verificationId);
-}
-
-class PhoneOtpVerified extends PhoneOtpState {}
-
-class PhoneOtpError extends PhoneOtpState {
-  final String message;
-  PhoneOtpError(this.message);
-}
-
+part 'otp_state.dart';
 
 class PhoneOtpCubit extends Cubit<PhoneOtpState> {
   PhoneOtpCubit() : super(PhoneOtpInitial());
@@ -27,7 +8,6 @@ class PhoneOtpCubit extends Cubit<PhoneOtpState> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   String? _verificationId;
 
-  
   Future<void> sendOtp(String phoneNumber) async {
     emit(PhoneOtpLoading());
     try {
@@ -54,7 +34,6 @@ class PhoneOtpCubit extends Cubit<PhoneOtpState> {
     }
   }
 
-  
   Future<void> verifyOtp(String smsCode) async {
     if (_verificationId == null) {
       emit(PhoneOtpError("No verification ID. Please request a new code."));

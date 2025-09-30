@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:krakeeb/core/utils/constants/constants.dart';
 
 class OtpInputFields extends StatefulWidget {
   final Function(String) onCompleted;
@@ -13,11 +14,11 @@ class OtpInputFields extends StatefulWidget {
 
 class _OtpInputFieldsState extends State<OtpInputFields> {
   final List<TextEditingController> _controllers = List.generate(
-    5,
+    AppConstants.otpLength,
     (_) => TextEditingController(),
   );
 
-  final List<FocusNode> _focusNodes = List.generate(5, (_) => FocusNode());
+  final List<FocusNode> _focusNodes = List.generate(AppConstants.otpLength, (_) => FocusNode());
 
   @override
   void dispose() {
@@ -31,11 +32,11 @@ class _OtpInputFieldsState extends State<OtpInputFields> {
   }
 
   void _onChanged(String value, int index) {
-    if (value.isNotEmpty && index < 4) {
+    if (value.isNotEmpty && index < AppConstants.otpLength-1) {
       _focusNodes[index + 1].requestFocus();
     }
 
-    if (index == 4 && value.isNotEmpty) {
+    if (index == AppConstants.otpLength-1 && value.isNotEmpty) {
       String code = _controllers.map((c) => c.text).join();
       widget.onCompleted(code);
     }
@@ -45,7 +46,7 @@ class _OtpInputFieldsState extends State<OtpInputFields> {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: List.generate(5, (index) {
+      children: List.generate(AppConstants.otpLength, (index) {
         return SizedBox(
           width: 53.w,
           height: 54.h,
