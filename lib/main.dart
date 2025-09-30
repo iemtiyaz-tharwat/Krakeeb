@@ -9,7 +9,7 @@ import 'features/auth/screens/otp_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ✅ تهيئة Firebase
+  
   await Firebase.initializeApp();
 
   runApp(const MyApp());

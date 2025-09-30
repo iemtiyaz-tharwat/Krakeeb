@@ -1,5 +1,5 @@
 class OtpModel {
-// الايميل المرتبط بالمستند
+//رقم الفون بتاع المستخدم
 final String phoneNumber;
 
 
