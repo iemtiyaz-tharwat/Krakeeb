@@ -91,7 +91,7 @@ class _EmailOtpScreenState extends State<PhoneOtpScreen> {
                               // height: 48.h,
                               child: Icon(
                                 Icons.arrow_back_ios,
-                                color: Color(0xff04332D),
+                                color: AppColors.otpVerificationScreenTextColor,
                                 size: 25,
                                 fontWeight: FontWeight.w700,
                               ),
@@ -101,7 +101,7 @@ class _EmailOtpScreenState extends State<PhoneOtpScreen> {
                               'Cancel',
                               style: TextStyle(
                                 fontSize: 24,
-                                color: Color(0xff04332D),
+                                color: AppColors.otpVerificationScreenTextColor,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: 'Otama-ep',
                               ),
@@ -123,7 +123,7 @@ class _EmailOtpScreenState extends State<PhoneOtpScreen> {
                             style: TextStyle(
                               fontSize: 24.sp,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xff04332D),
+                              color: AppColors.otpVerificationScreenTextColor,
                               fontFamily: 'Otama-ep',
                             ),
                           ),
@@ -161,7 +161,7 @@ class _EmailOtpScreenState extends State<PhoneOtpScreen> {
                     height: 48.h,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff009639),
+                        backgroundColor: AppColors.buttonsColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),

@@ -19,4 +19,3 @@ class PhoneOtpError extends PhoneOtpState {
   PhoneOtpError(this.message);
 }
 
-///  حدوث خطأ

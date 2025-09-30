@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:krakeeb/core/utils/constants/app_colors.dart';
 import 'package:krakeeb/core/utils/constants/constants.dart';
 
 class OtpInputFields extends StatefulWidget {
@@ -64,15 +65,15 @@ class _OtpInputFieldsState extends State<OtpInputFields> {
               filled: true,
               fillColor: Colors.white,
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.r),
                 borderSide: const BorderSide(color: Colors.grey),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: const BorderSide(color: Colors.green, width: 2),
+                borderRadius: BorderRadius.circular(8.r),
+                borderSide: BorderSide(color: AppColors.buttonsColor, width: 2.w),
               ),
             ),
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
           ),
         );
       }),
