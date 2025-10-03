@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:krakeeb/features/home/screens/home_screen.dart';
 
 import 'features/auth/cubit/otp_cubit.dart';
 import 'features/auth/screens/otp_screen.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Krakeeb',
-            home: const PhoneOtpScreen(phoneNumber: "+201227700151",)
+            home: HomeScreen()
           ),
         );
       },

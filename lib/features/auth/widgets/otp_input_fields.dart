@@ -70,7 +70,7 @@ class _OtpInputFieldsState extends State<OtpInputFields> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8.r),
-                borderSide: BorderSide(color: AppColors.buttonsColor, width: 2.w),
+                borderSide: BorderSide(color: AppColors.focusedBorderColor, width: 2.w),
               ),
             ),
             style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),

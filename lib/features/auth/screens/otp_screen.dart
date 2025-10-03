@@ -54,7 +54,7 @@ class _EmailOtpScreenState extends State<PhoneOtpScreen> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      backgroundColor: AppColors.scaffoldBackgroundColor,
+      backgroundColor: AppColors.primary,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(16.w),
@@ -161,7 +161,7 @@ class _EmailOtpScreenState extends State<PhoneOtpScreen> {
                     height: 48.h,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.buttonsColor,
+                        backgroundColor: AppColors.focusedBorderColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
