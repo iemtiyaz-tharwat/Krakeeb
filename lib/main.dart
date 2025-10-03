@@ -3,14 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:krakeeb/features/home/screens/home_screen.dart';
-
 import 'features/auth/cubit/otp_cubit.dart';
-import 'features/auth/screens/otp_screen.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  
   await Firebase.initializeApp();
 
   runApp(const MyApp());
@@ -27,15 +23,11 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (_) => PhoneOtpCubit(),
-            ),
-          ],
+          providers: [BlocProvider(create: (_) => PhoneOtpCubit())],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Krakeeb',
-            home: HomeScreen()
+            home: HomeScreen(),
           ),
         );
       },

@@ -8,17 +8,17 @@ class CustomElevatedItemBotton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    InkWell(
-      onTap: () {
-        
-      },
+    return InkWell(
+      onTap: () {},
       child: Container(
         height: 33,
         width: double.infinity,
         decoration: BoxDecoration(
           color: Color(0xffAFDD69),
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(18),
+            bottomRight: Radius.circular(18),
+          ),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -26,7 +26,7 @@ class CustomElevatedItemBotton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                width: 103,
+                width: 116.w,
                 child: Text(
                   item.title,
                   maxLines: 2,
@@ -37,8 +37,7 @@ class CustomElevatedItemBotton extends StatelessWidget {
                   ),
                 ),
               ),
-              Icon(Icons.arrow_forward_ios, color: Colors.white,)
-          
+              Icon(Icons.arrow_forward_ios, color: Colors.white),
             ],
           ),
         ),
