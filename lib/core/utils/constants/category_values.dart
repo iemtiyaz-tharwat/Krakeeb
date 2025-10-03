@@ -9,33 +9,33 @@ class CategoryValues {
   static const int cartonPrice = 10;
   static List<WasteItem> wasteItems = [
     WasteItem(
-      title: "metal waste",
-      imagePath: "assets/images/metal.svg",
+      title: "Metal waste",
+      imagePath: "assets/images/metal.png",
       price: "$metalPrice pounds per 1 Kg",
     ),
     WasteItem(
       title: "Plastic waste",
-      imagePath: "assets/images/plastic.svg",
+      imagePath: "assets/images/plastic.png",
       price: "$plasticPrice pounds per 1 Kg",
     ),
     WasteItem(
-      title: "oil waste",
-      imagePath: "assets/images/oil.svg",
+      title: "Oil waste",
+      imagePath: "assets/images/oil.png",
       price: "$oilPrice pounds per 1 Kg",
     ),
     WasteItem(
       title: "Electronic waste",
-      imagePath: "assets/images/electronic.svg",
+      imagePath: "assets/images/electronic.png",
       price: "$electronicPrice pounds per 1 Kg",
     ),
     WasteItem(
       title: "Paper waste",
-      imagePath: "assets/images/paper.svg",
+      imagePath: "assets/images/paper.png",
       price: "$paperPrice pounds per 1 Kg",
     ),
     WasteItem(
       title: "Carton waste",
-      imagePath: "assets/images/carton.svg",
+      imagePath: "assets/images/carton.png",
       price: "$cartonPrice pounds per 1 Kg",
     ),
   ];

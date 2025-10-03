@@ -17,4 +17,5 @@ class AppColors {
   static final onboardtextColor = Color(0xff646464);
   static final skipbuttonColor = Color(0xff8F8F8F);
   static final otpVerificationScreenTextColor = Color(0xff04332D);
+  static final categoryContaineBackGroundColor = Color(0xffECF7DD);
 }
